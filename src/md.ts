@@ -1,6 +1,7 @@
 import { color } from './colors';
+import { IOptions } from './model';
 export const mdOptionsList = ['bold', 'italic', 'mono', 'link', 'blockquote'];
-export function markdown(text, options) {
+export function markdown(text: string, options: Partial<IOptions>) {
     let result = text;
     if (options) {
         if (options.bold) {
